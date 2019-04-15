@@ -1,0 +1,269 @@
+#add systems to fit concurrently.
+#For each system specify the colvar file with the quantity to be reweighted on each column.
+#Last number is the number of variables in the  colvar file minus one since a weight is expected in the last column.
+add_system GAGA ./colvar/tetral/colvar_GAGA_OPC_mult3_new.bin 1
+add_system UUCG ./colvar/tetral/colvar_UUCG_OPC_mult3_new.bin 1
+add_system CCCC ./colvar/tetran/colvar_CCCC_noe_OPC_mult3_new.bin 53
+add_system UUUU ./colvar/tetran/colvar_UUUU_noe_OPC_mult3_new.bin 34
+add_system GACC ./colvar/tetran/colvar_GACC_noe_OPC_mult3_new.bin 52
+add_system AAAA ./colvar/tetran/colvar_AAAA_noe_OPC_mult3_new.bin 64
+
+
+
+#default 1e-6
+epsilon 1e-3
+
+#fit_from _fit_from_
+#fit_to _fit_to_
+
+#penalty 
+alpha 1500
+
+#to assign starting values to lambda
+#lambda 1 2 3 4 
+
+#default 10
+maxiter 400
+
+#define function to minimize. 
+#multiple rows allowed. All rows starting with function keyword will be combined in a unique sum defining the final loss function to minimize.
+#Variables are named as the name of the system plus a number from 0 up to the total available columns (minus one). Last column is the weight. 
+
+function 2.0*UUUU0^2
+function 2.0*UUUU1^2
+function 2.0*UUUU2^2
+function 2.0*UUUU3^2
+function 2.0*UUUU4^2
+function 2.0*UUUU5^2
+function 2.0*UUUU6^2
+function 2.0*UUUU7^2
+function 2.0*UUUU8^2
+function 2.0*UUUU9^2
+function 2.0*UUUU10^2
+function 2.0*UUUU11^2
+function 2.0*UUUU12^2
+function 2.0*UUUU13^2
+function 2.0*UUUU14^2
+function 2.0*UUUU15^2
+function 2.0*UUUU16^2
+function 2.0*UUUU17^2
+function 2.0*UUUU18^2
+function 2.0*UUUU19^2
+function 2.0*UUUU20^2
+function 2.0*UUUU21^2
+function 2.0*UUUU22^2
+function 2.0*UUUU23^2
+function 2.0*UUUU24^2
+#
+function 2.0*GACC0^2
+function 2.0*GACC1^2
+function 2.0*GACC2^2
+function 2.0*GACC3^2
+function 2.0*GACC4^2
+function 2.0*GACC5^2
+function 2.0*GACC6^2
+function 2.0*GACC7^2
+function 2.0*GACC8^2
+function 2.0*GACC9^2
+function 2.0*GACC10^2
+function 2.0*GACC11^2
+function 2.0*GACC12^2
+function 2.0*GACC13^2
+function 2.0*GACC14^2
+function 2.0*GACC15^2
+function 2.0*GACC16^2
+function 2.0*GACC17^2
+function 2.0*GACC18^2
+function 2.0*GACC19^2
+function 2.0*GACC20^2
+function 2.0*GACC21^2
+function 2.0*GACC22^2
+function 2.0*GACC23^2
+function 2.0*GACC24^2
+function 2.0*GACC25^2
+function 2.0*GACC26^2
+function 2.0*GACC27^2
+function 2.0*GACC28^2
+#
+function 2.0*AAAA0^2
+function 2.0*AAAA1^2
+function 2.0*AAAA2^2
+function 2.0*AAAA3^2
+function 2.0*AAAA4^2
+function 2.0*AAAA5^2
+function 2.0*AAAA6^2
+function 2.0*AAAA7^2
+function 2.0*AAAA8^2
+function 2.0*AAAA9^2
+function 2.0*AAAA10^2
+function 2.0*AAAA11^2
+function 2.0*AAAA12^2
+function 2.0*AAAA13^2
+function 2.0*AAAA14^2
+function 2.0*AAAA15^2
+function 2.0*AAAA16^2
+function 2.0*AAAA17^2
+function 2.0*AAAA18^2
+function 2.0*AAAA19^2
+function 2.0*AAAA20^2
+function 2.0*AAAA21^2
+function 2.0*AAAA22^2
+function 2.0*AAAA23^2
+function 2.0*AAAA24^2
+function 2.0*AAAA25^2
+function 2.0*AAAA26^2
+function 2.0*AAAA27^2
+#
+function 2.0*CCCC0^2
+function 2.0*CCCC1^2
+function 2.0*CCCC2^2
+function 2.0*CCCC3^2
+function 2.0*CCCC4^2
+function 2.0*CCCC5^2
+function 2.0*CCCC6^2
+function 2.0*CCCC7^2
+function 2.0*CCCC8^2
+function 2.0*CCCC9^2
+function 2.0*CCCC10^2
+function 2.0*CCCC11^2
+function 2.0*CCCC12^2
+function 2.0*CCCC13^2
+function 2.0*CCCC14^2
+function 2.0*CCCC15^2
+function 2.0*CCCC16^2
+function 2.0*CCCC17^2
+function 2.0*CCCC18^2
+function 2.0*CCCC19^2
+function 2.0*CCCC20^2
+function 2.0*CCCC21^2
+function 2.0*CCCC22^2
+function 2.0*CCCC23^2
+function 2.0*CCCC24^2
+function 2.0*CCCC25^2
+
+#block 1
+function 1100*max(UUUU25^(-1.0/6.0)-0.400000,0)^2+1100*max(0.330000-UUUU25^(-1.0/6.0),0)^2
+function 1100*max(UUUU26^(-1.0/6.0)-0.330000,0)^2+1100*max(0.280000-UUUU26^(-1.0/6.0),0)^2
+function 1100*max(UUUU27^(-1.0/6.0)-0.490000,0)^2+1100*max(0.380000-UUUU27^(-1.0/6.0),0)^2
+function 1100*max(UUUU28^(-1.0/6.0)-0.400000,0)^2+1100*max(0.330000-UUUU28^(-1.0/6.0),0)^2
+function 1100*max(UUUU29^(-1.0/6.0)-0.300000,0)^2+1100*max(0.260000-UUUU29^(-1.0/6.0),0)^2
+function 1100*max(UUUU30^(-1.0/6.0)-0.280000,0)^2+1100*max(0.230000-UUUU30^(-1.0/6.0),0)^2
+function 1100*max(UUUU31^(-1.0/6.0)-0.310000,0)^2+1100*max(0.260000-UUUU31^(-1.0/6.0),0)^2
+function 1100*max(UUUU32^(-1.0/6.0)-0.280000,0)^2+1100*max(0.230000-UUUU32^(-1.0/6.0),0)^2
+function 1100*max(UUUU33^(-1.0/6.0)-0.460000,0)^2+1100*max(0.360000-UUUU33^(-1.0/6.0),0)^2
+#
+function 1100*max(GACC29^(-1.0/6.0)-0.380000,0)^2+1100*max(0.300000-GACC29^(-1.0/6.0),0)^2
+function 1100*max(GACC30^(-1.0/6.0)-0.480000,0)^2+1100*max(0.370000-GACC30^(-1.0/6.0),0)^2
+function 1100*max(GACC31^(-1.0/6.0)-0.380000,0)^2+1100*max(0.300000-GACC31^(-1.0/6.0),0)^2
+function 1100*max(GACC32^(-1.0/6.0)-0.350000,0)^2+1100*max(0.290000-GACC32^(-1.0/6.0),0)^2
+function 1100*max(GACC33^(-1.0/6.0)-0.290000,0)^2+1100*max(0.240000-GACC33^(-1.0/6.0),0)^2
+function 1100*max(GACC34^(-1.0/6.0)-0.420000,0)^2+1100*max(0.330000-GACC34^(-1.0/6.0),0)^2
+function 1100*max(GACC35^(-1.0/6.0)-0.470000,0)^2+1100*max(0.360000-GACC35^(-1.0/6.0),0)^2
+function 1100*max(GACC36^(-1.0/6.0)-0.420000,0)^2+1100*max(0.330000-GACC36^(-1.0/6.0),0)^2
+function 1100*max(GACC37^(-1.0/6.0)-0.410000,0)^2+1100*max(0.320000-GACC37^(-1.0/6.0),0)^2
+function 1100*max(GACC38^(-1.0/6.0)-0.410000,0)^2+1100*max(0.330000-GACC38^(-1.0/6.0),0)^2
+function 1100*max(GACC39^(-1.0/6.0)-0.270000,0)^2+1100*max(0.220000-GACC39^(-1.0/6.0),0)^2
+function 1100*max(GACC40^(-1.0/6.0)-0.290000,0)^2+1100*max(0.240000-GACC40^(-1.0/6.0),0)^2
+function 1100*max(GACC41^(-1.0/6.0)-0.390000,0)^2+1100*max(0.310000-GACC41^(-1.0/6.0),0)^2
+function 1100*max(GACC42^(-1.0/6.0)-0.490000,0)^2+1100*max(0.370000-GACC42^(-1.0/6.0),0)^2
+function 1100*max(GACC43^(-1.0/6.0)-0.470000,0)^2+1100*max(0.360000-GACC43^(-1.0/6.0),0)^2
+function 1100*max(GACC44^(-1.0/6.0)-0.330000,0)^2+1100*max(0.270000-GACC44^(-1.0/6.0),0)^2
+function 1100*max(GACC45^(-1.0/6.0)-0.300000,0)^2+1100*max(0.240000-GACC45^(-1.0/6.0),0)^2
+function 1100*max(GACC46^(-1.0/6.0)-0.260000,0)^2+1100*max(0.210000-GACC46^(-1.0/6.0),0)^2
+function 1100*max(GACC47^(-1.0/6.0)-0.300000,0)^2+1100*max(0.250000-GACC47^(-1.0/6.0),0)^2
+function 1100*max(GACC48^(-1.0/6.0)-0.370000,0)^2+1100*max(0.300000-GACC48^(-1.0/6.0),0)^2
+function 1100*max(GACC49^(-1.0/6.0)-0.430000,0)^2+1100*max(0.340000-GACC49^(-1.0/6.0),0)^2
+function 1100*max(GACC50^(-1.0/6.0)-0.310000,0)^2+1100*max(0.250000-GACC50^(-1.0/6.0),0)^2
+function 1100*max(GACC51^(-1.0/6.0)-0.280000,0)^2+1100*max(0.230000-GACC51^(-1.0/6.0),0)^2
+#
+function 1100*max(AAAA28^(-1.0/6.0)-0.360000,0)^2+1100*max(0.300000-AAAA28^(-1.0/6.0),0)^2
+function 1100*max(AAAA29^(-1.0/6.0)-0.570000,0)^2+1100*max(0.420000-AAAA29^(-1.0/6.0),0)^2
+function 1100*max(AAAA30^(-1.0/6.0)-0.420000,0)^2+1100*max(0.350000-AAAA30^(-1.0/6.0),0)^2
+function 1100*max(AAAA31^(-1.0/6.0)-0.390000,0)^2+1100*max(0.330000-AAAA31^(-1.0/6.0),0)^2
+function 1100*max(AAAA32^(-1.0/6.0)-0.510000,0)^2+1100*max(0.400000-AAAA32^(-1.0/6.0),0)^2
+function 1100*max(AAAA33^(-1.0/6.0)-0.530000,0)^2+1100*max(0.410000-AAAA33^(-1.0/6.0),0)^2
+function 1100*max(AAAA34^(-1.0/6.0)-0.380000,0)^2+1100*max(0.310000-AAAA34^(-1.0/6.0),0)^2
+function 1100*max(AAAA35^(-1.0/6.0)-0.500000,0)^2+1100*max(0.390000-AAAA35^(-1.0/6.0),0)^2
+function 1100*max(AAAA36^(-1.0/6.0)-0.330000,0)^2+1100*max(0.270000-AAAA36^(-1.0/6.0),0)^2
+function 1100*max(AAAA37^(-1.0/6.0)-0.360000,0)^2+1100*max(0.300000-AAAA37^(-1.0/6.0),0)^2
+function 1100*max(AAAA38^(-1.0/6.0)-0.310000,0)^2+1100*max(0.260000-AAAA38^(-1.0/6.0),0)^2
+function 1100*max(AAAA39^(-1.0/6.0)-0.380000,0)^2+1100*max(0.310000-AAAA39^(-1.0/6.0),0)^2
+function 1100*max(AAAA40^(-1.0/6.0)-0.640000,0)^2+1100*max(0.440000-AAAA40^(-1.0/6.0),0)^2
+function 1100*max(AAAA41^(-1.0/6.0)-0.430000,0)^2+1100*max(0.350000-AAAA41^(-1.0/6.0),0)^2
+function 1100*max(AAAA42^(-1.0/6.0)-0.500000,0)^2+1100*max(0.390000-AAAA42^(-1.0/6.0),0)^2
+function 1100*max(AAAA43^(-1.0/6.0)-0.410000,0)^2+1100*max(0.340000-AAAA43^(-1.0/6.0),0)^2
+function 1100*max(AAAA44^(-1.0/6.0)-0.550000,0)^2+1100*max(0.410000-AAAA44^(-1.0/6.0),0)^2
+function 1100*max(AAAA45^(-1.0/6.0)-0.450000,0)^2+1100*max(0.370000-AAAA45^(-1.0/6.0),0)^2
+function 1100*max(AAAA46^(-1.0/6.0)-0.340000,0)^2+1100*max(0.280000-AAAA46^(-1.0/6.0),0)^2
+function 1100*max(AAAA47^(-1.0/6.0)-0.320000,0)^2+1100*max(0.260000-AAAA47^(-1.0/6.0),0)^2
+function 1100*max(AAAA48^(-1.0/6.0)-0.330000,0)^2+1100*max(0.280000-AAAA48^(-1.0/6.0),0)^2
+function 1100*max(AAAA49^(-1.0/6.0)-0.320000,0)^2+1100*max(0.270000-AAAA49^(-1.0/6.0),0)^2
+function 1100*max(AAAA50^(-1.0/6.0)-0.420000,0)^2+1100*max(0.340000-AAAA50^(-1.0/6.0),0)^2
+function 1100*max(AAAA51^(-1.0/6.0)-0.620000,0)^2+1100*max(0.440000-AAAA51^(-1.0/6.0),0)^2
+function 1100*max(AAAA52^(-1.0/6.0)-0.460000,0)^2+1100*max(0.370000-AAAA52^(-1.0/6.0),0)^2
+function 1100*max(AAAA53^(-1.0/6.0)-0.420000,0)^2+1100*max(0.350000-AAAA53^(-1.0/6.0),0)^2
+function 1100*max(AAAA54^(-1.0/6.0)-0.700000,0)^2+1100*max(0.470000-AAAA54^(-1.0/6.0),0)^2
+function 1100*max(AAAA55^(-1.0/6.0)-0.570000,0)^2+1100*max(0.420000-AAAA55^(-1.0/6.0),0)^2
+function 1100*max(AAAA56^(-1.0/6.0)-0.300000,0)^2+1100*max(0.250000-AAAA56^(-1.0/6.0),0)^2
+function 1100*max(AAAA57^(-1.0/6.0)-0.350000,0)^2+1100*max(0.290000-AAAA57^(-1.0/6.0),0)^2
+function 1100*max(AAAA58^(-1.0/6.0)-0.340000,0)^2+1100*max(0.280000-AAAA58^(-1.0/6.0),0)^2
+function 1100*max(AAAA59^(-1.0/6.0)-0.440000,0)^2+1100*max(0.360000-AAAA59^(-1.0/6.0),0)^2
+function 1100*max(AAAA60^(-1.0/6.0)-0.490000,0)^2+1100*max(0.390000-AAAA60^(-1.0/6.0),0)^2
+function 1100*max(AAAA61^(-1.0/6.0)-0.330000,0)^2+1100*max(0.280000-AAAA61^(-1.0/6.0),0)^2
+function 1100*max(AAAA62^(-1.0/6.0)-0.550000,0)^2+1100*max(0.410000-AAAA62^(-1.0/6.0),0)^2
+function 1100*max(AAAA63^(-1.0/6.0)-0.420000,0)^2+1100*max(0.350000-AAAA63^(-1.0/6.0),0)^2
+#
+function 1100*max(CCCC26^(-1.0/6.0)-0.461000,0)^2+1100*max(0.377000-CCCC26^(-1.0/6.0),0)^2
+function 1100*max(CCCC27^(-1.0/6.0)-0.298000,0)^2+1100*max(0.261000-CCCC27^(-1.0/6.0),0)^2
+function 1100*max(CCCC28^(-1.0/6.0)-0.407000,0)^2+1100*max(0.345000-CCCC28^(-1.0/6.0),0)^2
+function 1100*max(CCCC29^(-1.0/6.0)-0.368000,0)^2+1100*max(0.317000-CCCC29^(-1.0/6.0),0)^2
+function 1100*max(CCCC30^(-1.0/6.0)-0.360000,0)^2+1100*max(0.310000-CCCC30^(-1.0/6.0),0)^2
+function 1100*max(CCCC31^(-1.0/6.0)-0.391000,0)^2+1100*max(0.334000-CCCC31^(-1.0/6.0),0)^2
+function 1100*max(CCCC32^(-1.0/6.0)-0.494000,0)^2+1100*max(0.394000-CCCC32^(-1.0/6.0),0)^2
+function 1100*max(CCCC33^(-1.0/6.0)-0.408000,0)^2+1100*max(0.346000-CCCC33^(-1.0/6.0),0)^2
+function 1100*max(CCCC34^(-1.0/6.0)-0.288000,0)^2+1100*max(0.252000-CCCC34^(-1.0/6.0),0)^2
+function 1100*max(CCCC35^(-1.0/6.0)-0.365000,0)^2+1100*max(0.314000-CCCC35^(-1.0/6.0),0)^2
+function 1100*max(CCCC36^(-1.0/6.0)-0.372000,0)^2+1100*max(0.320000-CCCC36^(-1.0/6.0),0)^2
+function 1100*max(CCCC37^(-1.0/6.0)-0.352000,0)^2+1100*max(0.305000-CCCC37^(-1.0/6.0),0)^2
+function 1100*max(CCCC38^(-1.0/6.0)-0.393000,0)^2+1100*max(0.335000-CCCC38^(-1.0/6.0),0)^2
+function 1100*max(CCCC39^(-1.0/6.0)-0.319000,0)^2+1100*max(0.278000-CCCC39^(-1.0/6.0),0)^2
+function 1100*max(CCCC40^(-1.0/6.0)-0.277000,0)^2+1100*max(0.242000-CCCC40^(-1.0/6.0),0)^2
+function 1100*max(CCCC41^(-1.0/6.0)-0.415000,0)^2+1100*max(0.350000-CCCC41^(-1.0/6.0),0)^2
+function 1100*max(CCCC42^(-1.0/6.0)-0.434000,0)^2+1100*max(0.362000-CCCC42^(-1.0/6.0),0)^2
+function 1100*max(CCCC43^(-1.0/6.0)-0.413000,0)^2+1100*max(0.349000-CCCC43^(-1.0/6.0),0)^2
+function 1100*max(CCCC44^(-1.0/6.0)-0.488000,0)^2+1100*max(0.391000-CCCC44^(-1.0/6.0),0)^2
+function 1100*max(CCCC45^(-1.0/6.0)-0.378000,0)^2+1100*max(0.324000-CCCC45^(-1.0/6.0),0)^2
+function 1100*max(CCCC46^(-1.0/6.0)-0.358000,0)^2+1100*max(0.309000-CCCC46^(-1.0/6.0),0)^2
+function 1100*max(CCCC47^(-1.0/6.0)-0.295000,0)^2+1100*max(0.258000-CCCC47^(-1.0/6.0),0)^2
+function 1100*max(CCCC48^(-1.0/6.0)-0.292000,0)^2+1100*max(0.255000-CCCC48^(-1.0/6.0),0)^2
+function 1100*max(CCCC49^(-1.0/6.0)-0.305000,0)^2+1100*max(0.266000-CCCC49^(-1.0/6.0),0)^2
+function 1100*max(CCCC50^(-1.0/6.0)-0.275000,0)^2+1100*max(0.241000-CCCC50^(-1.0/6.0),0)^2
+function 1100*max(CCCC51^(-1.0/6.0)-0.428000,0)^2+1100*max(0.358000-CCCC51^(-1.0/6.0),0)^2
+function 1100*max(CCCC52^(-1.0/6.0)-0.431000,0)^2+1100*max(0.360000-CCCC52^(-1.0/6.0),0)^2
+#block 2
+function 20*max(0,log(0.5)-log(GAGA))^2
+function 20*max(0,log(0.5)-log(UUCG))^2
+
+
+#print file_name variables to print. 
+#Multiple variables allowed separated by a semicolon
+#Functions allowed. 
+
+#J coupling rmse
+print JC_AAAA sqrt((AAAA0^2+AAAA1^2+AAAA2^2+AAAA3^2+AAAA4^2+AAAA5^2+AAAA6^2+AAAA7^2+AAAA8^2+AAAA9^2+AAAA10^2+AAAA11^2+AAAA12^2+AAAA13^2+AAAA14^2+AAAA15^2+AAAA16^2+AAAA17^2+AAAA18^2+AAAA19^2+AAAA20^2+AAAA21^2+AAAA22^2+AAAA23^2+AAAA24^2+AAAA25^2+AAAA26^2+AAAA27)/28)
+print JC_UUUU sqrt((UUUU0^2+UUUU1^2+UUUU2^2+UUUU3^2+UUUU4^2+UUUU5^2+UUUU6^2+UUUU7^2+UUUU8^2+UUUU9^2+UUUU10^2+UUUU11^2+UUUU12^2+UUUU13^2+UUUU14^2+UUUU15^2+UUUU16^2+UUUU17^2+UUUU18^2+UUUU19^2+UUUU20^2+UUUU21^2+UUUU22^2+UUUU23^2+UUUU24)/25)
+print JC_CCCC sqrt((CCCC0^2+CCCC1^2+CCCC2^2+CCCC3^2+CCCC4^2+CCCC5^2+CCCC6^2+CCCC7^2+CCCC8^2+CCCC9^2+CCCC10^2+CCCC11^2+CCCC12^2+CCCC13^2+CCCC14^2+CCCC15^2+CCCC16^2+CCCC17^2+CCCC18^2+CCCC19^2+CCCC20^2+CCCC21^2+CCCC22^2+CCCC23^2+CCCC24^2+CCCC25)/26)
+print JC_GACC sqrt((GACC0^2+GACC1^2+GACC2^2+GACC3^2+GACC4^2+GACC5^2+GACC6^2+GACC7^2+GACC8^2+GACC9^2+GACC10^2+GACC11^2+GACC12^2+GACC13^2+GACC14^2+GACC15^2+GACC16^2+GACC17^2+GACC18^2+GACC19^2+GACC20^2+GACC21^2+GACC22^2+GACC23^2+GACC24^2+GACC25^2+GACC26^2+GACC27^2+GACC28)/29)
+
+# NOE 
+ print NOE_AAAA AAAA28^(-1.0/6.0);AAAA29^(-1.0/6.0);AAAA30^(-1.0/6.0);AAAA31^(-1.0/6.0);AAAA32^(-1.0/6.0);AAAA33^(-1.0/6.0);AAAA34^(-1.0/6.0);AAAA35^(-1.0/6.0);AAAA36^(-1.0/6.0);AAAA37^(-1.0/6.0);AAAA38^(-1.0/6.0);AAAA39^(-1.0/6.0);AAAA40^(-1.0/6.0);AAAA41^(-1.0/6.0);AAAA42^(-1.0/6.0);AAAA43^(-1.0/6.0);AAAA44^(-1.0/6.0);AAAA45^(-1.0/6.0);AAAA46^(-1.0/6.0);AAAA47^(-1.0/6.0);AAAA48^(-1.0/6.0);AAAA49^(-1.0/6.0);AAAA50^(-1.0/6.0);AAAA51^(-1.0/6.0);AAAA52^(-1.0/6.0);AAAA53^(-1.0/6.0);AAAA54^(-1.0/6.0);AAAA55^(-1.0/6.0);AAAA56^(-1.0/6.0);AAAA57^(-1.0/6.0);AAAA58^(-1.0/6.0);AAAA59^(-1.0/6.0);AAAA60^(-1.0/6.0);AAAA61^(-1.0/6.0);AAAA62^(-1.0/6.0);AAAA63^(-1.0/6.0)
+print NOE_UUUU UUUU25^(-1.0/6.0);UUUU26^(-1.0/6.0);UUUU27^(-1.0/6.0);UUUU28^(-1.0/6.0);UUUU29^(-1.0/6.0);UUUU30^(-1.0/6.0);UUUU31^(-1.0/6.0);UUUU32^(-1.0/6.0);UUUU33^(-1.0/6.0)
+print NOE_CCCC CCCC26^(-1.0/6.0);CCCC27^(-1.0/6.0);CCCC28^(-1.0/6.0);CCCC29^(-1.0/6.0);CCCC30^(-1.0/6.0);CCCC31^(-1.0/6.0);CCCC32^(-1.0/6.0);CCCC33^(-1.0/6.0);CCCC34^(-1.0/6.0);CCCC35^(-1.0/6.0);CCCC36^(-1.0/6.0);CCCC37^(-1.0/6.0);CCCC38^(-1.0/6.0);CCCC39^(-1.0/6.0);CCCC40^(-1.0/6.0);CCCC41^(-1.0/6.0);CCCC42^(-1.0/6.0);CCCC43^(-1.0/6.0);CCCC44^(-1.0/6.0);CCCC45^(-1.0/6.0);CCCC46^(-1.0/6.0);CCCC47^(-1.0/6.0);CCCC48^(-1.0/6.0);CCCC49^(-1.0/6.0);CCCC50^(-1.0/6.0);CCCC51^(-1.0/6.0);CCCC52^(-1.0/6.0)
+print NOE_GACC GACC29^(-1.0/6.0);GACC30^(-1.0/6.0);GACC31^(-1.0/6.0);GACC32^(-1.0/6.0);GACC33^(-1.0/6.0);GACC34^(-1.0/6.0);GACC35^(-1.0/6.0);GACC36^(-1.0/6.0);GACC37^(-1.0/6.0);GACC38^(-1.0/6.0);GACC39^(-1.0/6.0);GACC40^(-1.0/6.0);GACC41^(-1.0/6.0);GACC42^(-1.0/6.0);GACC43^(-1.0/6.0);GACC44^(-1.0/6.0);GACC45^(-1.0/6.0);GACC46^(-1.0/6.0);GACC47^(-1.0/6.0);GACC48^(-1.0/6.0);GACC49^(-1.0/6.0);GACC50^(-1.0/6.0);GACC51^(-1.0/6.0);
+
+#TL
+print UUCG UUCG
+print GAGA GAGA
+
+#coeffiecients output file
+lambdafile lagmult.dat
