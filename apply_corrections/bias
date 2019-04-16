@@ -1,0 +1,76 @@
+# vim: ft=plumed
+alpha2: TORSION ATOMS=@alpha-2
+beta2: TORSION ATOMS=@beta-2
+alpha3: TORSION ATOMS=@alpha-3
+beta3: TORSION ATOMS=@beta-3
+alpha4: TORSION ATOMS=@alpha-4
+beta4: TORSION ATOMS=@beta-4
+chi1: TORSION ATOMS=@chi-1
+chi2: TORSION ATOMS=@chi-2
+chi3: TORSION ATOMS=@chi-3
+chi4: TORSION ATOMS=@chi-4
+zeta1: TORSION ATOMS=@zeta-1
+epsilon1: TORSION ATOMS=@epsilon-1
+zeta2: TORSION ATOMS=@zeta-2
+epsilon2: TORSION ATOMS=@epsilon-2
+zeta3: TORSION ATOMS=@zeta-3
+epsilon3: TORSION ATOMS=@epsilon-3
+gamma1: TORSION ATOMS=@gamma-1
+delta1: TORSION ATOMS=@delta-1
+gamma2: TORSION ATOMS=@gamma-2
+delta2: TORSION ATOMS=@delta-2
+gamma3: TORSION ATOMS=@gamma-3
+delta3: TORSION ATOMS=@delta-3
+gamma4: TORSION ATOMS=@gamma-4
+delta4: TORSION ATOMS=@delta-4
+sumcosalpha: MATHEVAL ARG=alpha2,alpha3,alpha4 VAR=v2,v3,v4 FUNC=cos(1*v2)+cos(1*v3)+cos(1*v4) PERIODIC=NO
+sumsinalpha: MATHEVAL ARG=alpha2,alpha3,alpha4 VAR=v2,v3,v4 FUNC=sin(1*v2)+sin(1*v3)+sin(1*v4) PERIODIC=NO
+2sumcosalpha: MATHEVAL ARG=alpha2,alpha3,alpha4 VAR=v2,v3,v4 FUNC=cos(2*v2)+cos(2*v3)+cos(2*v4) PERIODIC=NO
+2sumsinalpha: MATHEVAL ARG=alpha2,alpha3,alpha4 VAR=v2,v3,v4 FUNC=sin(2*v2)+sin(2*v3)+sin(2*v4) PERIODIC=NO
+3sumcosalpha: MATHEVAL ARG=alpha2,alpha3,alpha4 VAR=v2,v3,v4 FUNC=cos(3*v2)+cos(3*v3)+cos(3*v4) PERIODIC=NO
+3sumsinalpha: MATHEVAL ARG=alpha2,alpha3,alpha4 VAR=v2,v3,v4 FUNC=sin(3*v2)+sin(3*v3)+sin(3*v4) PERIODIC=NO
+sumcosbeta: MATHEVAL ARG=beta2,beta3,beta4 VAR=v2,v3,v4 FUNC=cos(1*v2)+cos(1*v3)+cos(1*v4) PERIODIC=NO
+sumsinbeta: MATHEVAL ARG=beta2,beta3,beta4 VAR=v2,v3,v4 FUNC=sin(1*v2)+sin(1*v3)+sin(1*v4) PERIODIC=NO
+2sumcosbeta: MATHEVAL ARG=beta2,beta3,beta4 VAR=v2,v3,v4 FUNC=cos(2*v2)+cos(2*v3)+cos(2*v4) PERIODIC=NO
+2sumsinbeta: MATHEVAL ARG=beta2,beta3,beta4 VAR=v2,v3,v4 FUNC=sin(2*v2)+sin(2*v3)+sin(2*v4) PERIODIC=NO
+3sumcosbeta: MATHEVAL ARG=beta2,beta3,beta4 VAR=v2,v3,v4 FUNC=cos(3*v2)+cos(3*v3)+cos(3*v4) PERIODIC=NO
+3sumsinbeta: MATHEVAL ARG=beta2,beta3,beta4 VAR=v2,v3,v4 FUNC=sin(3*v2)+sin(3*v3)+sin(3*v4) PERIODIC=NO
+sumcosgamma: MATHEVAL ARG=gamma1,gamma2,gamma3,gamma4 VAR=v1,v2,v3,v4 FUNC=cos(1*v1)+cos(1*v2)+cos(1*v3)+cos(1*v4) PERIODIC=NO
+sumsingamma: MATHEVAL ARG=gamma1,gamma2,gamma3,gamma4 VAR=v1,v2,v3,v4 FUNC=sin(1*v1)+sin(1*v2)+sin(1*v3)+sin(1*v4) PERIODIC=NO
+2sumcosgamma: MATHEVAL ARG=gamma1,gamma2,gamma3,gamma4 VAR=v1,v2,v3,v4 FUNC=cos(2*v1)+cos(2*v2)+cos(2*v3)+cos(2*v4) PERIODIC=NO
+2sumsingamma: MATHEVAL ARG=gamma1,gamma2,gamma3,gamma4 VAR=v1,v2,v3,v4 FUNC=sin(2*v1)+sin(2*v2)+sin(2*v3)+sin(2*v4) PERIODIC=NO
+3sumcosgamma: MATHEVAL ARG=gamma1,gamma2,gamma3,gamma4 VAR=v1,v2,v3,v4 FUNC=cos(3*v1)+cos(3*v2)+cos(3*v3)+cos(3*v4) PERIODIC=NO
+3sumsingamma: MATHEVAL ARG=gamma1,gamma2,gamma3,gamma4 VAR=v1,v2,v3,v4 FUNC=sin(3*v1)+sin(3*v2)+sin(3*v3)+sin(3*v4) PERIODIC=NO
+sumcosdelta: MATHEVAL ARG=delta1,delta2,delta3,delta4 VAR=v1,v2,v3,v4 FUNC=cos(1*v1)+cos(1*v2)+cos(1*v3)+cos(1*v4) PERIODIC=NO
+sumsindelta: MATHEVAL ARG=delta1,delta2,delta3,delta4 VAR=v1,v2,v3,v4 FUNC=sin(1*v1)+sin(1*v2)+sin(1*v3)+sin(1*v4) PERIODIC=NO
+2sumcosdelta: MATHEVAL ARG=delta1,delta2,delta3,delta4 VAR=v1,v2,v3,v4 FUNC=cos(2*v1)+cos(2*v2)+cos(2*v3)+cos(2*v4) PERIODIC=NO
+2sumsindelta: MATHEVAL ARG=delta1,delta2,delta3,delta4 VAR=v1,v2,v3,v4 FUNC=sin(2*v1)+sin(2*v2)+sin(2*v3)+sin(2*v4) PERIODIC=NO
+3sumcosdelta: MATHEVAL ARG=delta1,delta2,delta3,delta4 VAR=v1,v2,v3,v4 FUNC=cos(3*v1)+cos(3*v2)+cos(3*v3)+cos(3*v4) PERIODIC=NO
+3sumsindelta: MATHEVAL ARG=delta1,delta2,delta3,delta4 VAR=v1,v2,v3,v4 FUNC=sin(3*v1)+sin(3*v2)+sin(3*v3)+sin(3*v4) PERIODIC=NO
+sumcosepsilon: MATHEVAL ARG=epsilon1,epsilon2,epsilon3 VAR=v1,v2,v3 FUNC=cos(1*v1)+cos(1*v2)+cos(1*v3) PERIODIC=NO
+sumsinepsilon: MATHEVAL ARG=epsilon1,epsilon2,epsilon3 VAR=v1,v2,v3 FUNC=sin(1*v1)+sin(1*v2)+sin(1*v3) PERIODIC=NO
+2sumcosepsilon: MATHEVAL ARG=epsilon1,epsilon2,epsilon3 VAR=v1,v2,v3 FUNC=cos(2*v1)+cos(2*v2)+cos(2*v3) PERIODIC=NO
+2sumsinepsilon: MATHEVAL ARG=epsilon1,epsilon2,epsilon3 VAR=v1,v2,v3 FUNC=sin(2*v1)+sin(2*v2)+sin(2*v3) PERIODIC=NO
+3sumcosepsilon: MATHEVAL ARG=epsilon1,epsilon2,epsilon3 VAR=v1,v2,v3 FUNC=cos(3*v1)+cos(3*v2)+cos(3*v3) PERIODIC=NO
+3sumsinepsilon: MATHEVAL ARG=epsilon1,epsilon2,epsilon3 VAR=v1,v2,v3 FUNC=sin(3*v1)+sin(3*v2)+sin(3*v3) PERIODIC=NO
+sumcoszeta: MATHEVAL ARG=zeta1,zeta2,zeta3 VAR=v1,v2,v3 FUNC=cos(1*v1)+cos(1*v2)+cos(1*v3) PERIODIC=NO
+sumsinzeta: MATHEVAL ARG=zeta1,zeta2,zeta3 VAR=v1,v2,v3 FUNC=sin(1*v1)+sin(1*v2)+sin(1*v3) PERIODIC=NO
+2sumcoszeta: MATHEVAL ARG=zeta1,zeta2,zeta3 VAR=v1,v2,v3 FUNC=cos(2*v1)+cos(2*v2)+cos(2*v3) PERIODIC=NO
+2sumsinzeta: MATHEVAL ARG=zeta1,zeta2,zeta3 VAR=v1,v2,v3 FUNC=sin(2*v1)+sin(2*v2)+sin(2*v3) PERIODIC=NO
+3sumcoszeta: MATHEVAL ARG=zeta1,zeta2,zeta3 VAR=v1,v2,v3 FUNC=cos(3*v1)+cos(3*v2)+cos(3*v3) PERIODIC=NO
+3sumsinzeta: MATHEVAL ARG=zeta1,zeta2,zeta3 VAR=v1,v2,v3 FUNC=sin(3*v1)+sin(3*v2)+sin(3*v3) PERIODIC=NO
+pursumcoschi: MATHEVAL ARG=chi1,chi2,chi3,chi4 VAR=v1,v2,v3,v4 FUNC=cos(1*v1)+cos(1*v2)+cos(1*v3)+cos(1*v4) PERIODIC=NO
+2pursumcoschi: MATHEVAL ARG=chi1,chi2,chi3,chi4 VAR=v1,v2,v3,v4 FUNC=cos(2*v1)+cos(2*v2)+cos(2*v3)+cos(2*v4) PERIODIC=NO
+3pursumcoschi: MATHEVAL ARG=chi1,chi2,chi3,chi4 VAR=v1,v2,v3,v4 FUNC=cos(3*v1)+cos(3*v2)+cos(3*v3)+cos(3*v4) PERIODIC=NO
+pursumsinchi: MATHEVAL ARG=chi1,chi2,chi3,chi4 VAR=v1,v2,v3,v4 FUNC=sin(1*v1)+sin(1*v2)+sin(1*v3)+sin(1*v4) PERIODIC=NO
+2pursumsinchi: MATHEVAL ARG=chi1,chi2,chi3,chi4 VAR=v1,v2,v3,v4 FUNC=sin(2*v1)+sin(2*v2)+sin(2*v3)+sin(2*v4) PERIODIC=NO
+3pursumsinchi: MATHEVAL ARG=chi1,chi2,chi3,chi4 VAR=v1,v2,v3,v4 FUNC=sin(3*v1)+sin(3*v2)+sin(3*v3)+sin(3*v4) PERIODIC=NO
+pyrsumcoschi: MATHEVAL ARG=chi1,chi2,chi3,chi4 VAR=v1,v2,v3,v4 FUNC=0*(v1)+0*(v2)+0*(v3)+0*(v4) PERIODIC=NO
+2pyrsumcoschi: MATHEVAL ARG=chi1,chi2,chi3,chi4 VAR=v1,v2,v3,v4 FUNC=0*(v1)+0*(v2)+0*(v3)+0*(v4) PERIODIC=NO
+3pyrsumcoschi: MATHEVAL ARG=chi1,chi2,chi3,chi4 VAR=v1,v2,v3,v4 FUNC=0*(v1)+0*(v2)+0*(v3)+0*(v4) PERIODIC=NO
+pyrsumsinchi: MATHEVAL ARG=chi1,chi2,chi3,chi4 VAR=v1,v2,v3,v4 FUNC=0*(v1)+0*(v2)+0*(v3)+0*(v4) PERIODIC=NO
+2pyrsumsinchi: MATHEVAL ARG=chi1,chi2,chi3,chi4 VAR=v1,v2,v3,v4 FUNC=0*(v1)+0*(v2)+0*(v3)+0*(v4) PERIODIC=NO
+3pyrsumsinchi: MATHEVAL ARG=chi1,chi2,chi3,chi4 VAR=v1,v2,v3,v4 FUNC=0*(v1)+0*(v2)+0*(v3)+0*(v4) PERIODIC=NO
+kbt: CONSTANT VALUE=2.5
+mybias: MATHEVAL ARG=kbt,sumcosalpha,sumcosbeta,sumcosgamma,sumcosdelta,sumcosepsilon,sumcoszeta,sumsinalpha,sumsinbeta,sumsingamma,sumsindelta,sumsinepsilon,sumsinzeta,pursumcoschi,pyrsumcoschi,pursumsinchi,pyrsumsinchi,2sumcosalpha,2sumcosbeta,2sumcosgamma,2sumcosdelta,2sumcosepsilon,2sumcoszeta,2sumsinalpha,2sumsinbeta,2sumsingamma,2sumsindelta,2sumsinepsilon,2sumsinzeta,2pursumcoschi,2pyrsumcoschi,2pursumsinchi,2pyrsumsinchi,3sumcosalpha,3sumcosbeta,3sumcosgamma,3sumcosdelta,3sumcosepsilon,3sumcoszeta,3sumsinalpha,3sumsinbeta,3sumsingamma,3sumsindelta,3sumsinepsilon,3sumsinzeta,3pursumcoschi,3pyrsumcoschi,3pursumsinchi,3pyrsumsinchi VAR=kbt,v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11,v12,v13,v14,v15,v16,v17,v18,v19,v20,v21,v22,v23,v24,v25,v26,v27,v28,v29,v30,v31,v32,v33,v34,v35,v36,v37,v38,v39,v40,v41,v42,v43,v44,v45,v46,v47,v48 FUNC=kbt*((0.028743*v1)+(-0.118088*v2)+(0.369240*v3)+(-0.068875*v4)+(-0.061779*v5)+(-0.083563*v6)+(0.045960*v7)+(-0.085707*v8)+(0.080645*v9)+(-0.011406*v10)+(0.038967*v11)+(0.220101*v12)+(-0.007880*v13)+(0.067727*v14)+(-0.086418*v15)+(-0.014430*v16)+(-0.135683*v17)+(0.199287*v18)+(-0.269494*v19)+(0.035808*v20)+(0.086680*v21)+(0.091654*v22)+(0.064641*v23)+(0.008920*v24)+(0.190771*v25)+(-0.109477*v26)+(0.054064*v27)+(0.150732*v28)+(-0.054599*v29)+(-0.116106*v30)+(-0.073151*v31)+(-0.046067*v32)+(0.122662*v33)+(-0.064958*v34)+(-0.001949*v35)+(0.109930*v36)+(0.042434*v37)+(0.061681*v38)+(0.032150*v39)+(0.016087*v40)+(0.020993*v41)+(0.051061*v42)+(-0.077758*v43)+(0.015956*v44)+(0.016977*v45)+(0.037457*v46)+(0.143994*v47)+(0.140334*v48)) PERIODIC=NO
+BIASVALUE ARG=mybias

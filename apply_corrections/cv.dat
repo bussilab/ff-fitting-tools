@@ -1,0 +1,56 @@
+MOLINFO STRUCTURE=AAAA.pdb  MOLTYPE=rna
+ 
+#Number of total residues: 4
+#Number of biased residues: 4
+ 
+###########################
+#### Torsions
+###########################
+ 
+#### alpha
+ 
+a2: TORSION ATOMS=@alpha-2 #biased
+a3: TORSION ATOMS=@alpha-3 #biased
+a4: TORSION ATOMS=@alpha-4 #biased
+ 
+#### beta
+ 
+b2: TORSION ATOMS=@beta-2 #biased
+b3: TORSION ATOMS=@beta-3 #biased
+b4: TORSION ATOMS=@beta-4 #biased
+ 
+#### gamma
+ 
+g1: TORSION ATOMS=@gamma-1 #biased
+g2: TORSION ATOMS=@gamma-2 #biased
+g3: TORSION ATOMS=@gamma-3 #biased
+g4: TORSION ATOMS=@gamma-4 #biased
+ 
+#### epsilon
+ 
+e1: TORSION ATOMS=@epsilon-1 #biased
+e2: TORSION ATOMS=@epsilon-2 #biased
+e3: TORSION ATOMS=@epsilon-3 #biased
+ 
+#### zeta
+ 
+z1: TORSION ATOMS=@zeta-1 #biased
+z2: TORSION ATOMS=@zeta-2 #biased
+z3: TORSION ATOMS=@zeta-3 #biased
+ 
+#### chi
+ 
+c1: TORSION ATOMS=@chi-1 #biased
+c2: TORSION ATOMS=@chi-2 #biased
+c3: TORSION ATOMS=@chi-3 #biased
+c4: TORSION ATOMS=@chi-4 #biased
+ 
+###########################
+#### Puckering
+###########################
+
+puck1: PUCKERING ATOMS=@sugar-1  #biased
+puck2: PUCKERING ATOMS=@sugar-2  #biased
+puck3: PUCKERING ATOMS=@sugar-3  #biased
+puck4: PUCKERING ATOMS=@sugar-4  #biased
+ 

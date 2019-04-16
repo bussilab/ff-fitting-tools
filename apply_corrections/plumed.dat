@@ -1,0 +1,3 @@
+# vim: ft=plumed
+INCLUDE FILE=cv.dat
+INCLUDE FILE=bias_0
