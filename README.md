@@ -1,3 +1,5 @@
+Repository containing supplementary code related paper [Cesari et al JCTC (2019)](https://doi.org/10.1021/acs.jctc.9b00206).
+
 # Requirements
 - C++ compiler supporting C++ 2011
 
